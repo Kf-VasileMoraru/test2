@@ -30,3 +30,7 @@ const a = prompt("film", ""),
     personalMovieDB["movies"][c] = d;
 
     console.log(personalMovieDB);
+    for (let index = 0; index < array.length; index++) {
+        const element = array[index];
+        
+    }
