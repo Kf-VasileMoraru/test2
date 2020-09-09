@@ -32,7 +32,7 @@ const a = prompt("film", ""),
     console.log(personalMovieDB);
     for (let index = 0; index < array.length; index++) {
         const element = array[index];
-sdadas
-dsadas
+sfsfsdfsd
+fsdfsd
 
     }
