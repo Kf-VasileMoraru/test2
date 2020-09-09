@@ -34,5 +34,9 @@ const a = prompt("film", ""),
         const element = array[index];
 sfsfsdfsd
 fsdfsd
+sfsfsdfsd
+fsdfsd
+
+
 
     }
