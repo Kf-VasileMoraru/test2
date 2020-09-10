@@ -12,14 +12,14 @@
 //console.log(result);
 //console.log(`tra la la ${result}`);
 
-const numberOfFilms = +prompt("How many films have you seen", "...");
-const personalMovieDB = {
-    count: numberOfFilms,
-    movies: {},
-    actors: {},
-    genres: [],
-    private: false
-};
+// const numberOfFilms = +prompt("How many films have you seen", "...");
+// const personalMovieDB = {
+//     count: numberOfFilms,
+//     movies: {},
+//     actors: {},
+//     genres: [],
+//     private: false
+// };
 
 // const a = prompt("film", ""),
 //     b = prompt("nota", ""),
@@ -29,20 +29,53 @@ const personalMovieDB = {
 // personalMovieDB.movies.a = b;
 // personalMovieDB["movies"][c] = d;
 
+// let i = 0;
+// while (i++ < 3) {
+//     const e = prompt("film", ""),
+//         f = prompt("nota", "");
 
-let i = 0;
-while (i++ < 3) {
-    const e = prompt("film", ""),
-        f = prompt("nota", "");
+//     if (e != null && e != '' && e.length < 4) {
+//         personalMovieDB.movies[e] = f;
+//     } else {
+//         i--;
+//         continue;
+//     }
 
-    if (e != null && e != '' && e.length < 4) {
-        personalMovieDB.movies[e] = f;
-    } else {
-        i--;
-        continue;
+// }
+
+// console.log(personalMovieDB);
+
+let numberOfFilms;
+
+function start() {
+    numberOfFilms = +prompt("How many films have you seen", "...");
+    while (numberOfFilms == '' || numberOfFilms == null || isNaN(numberOfFilms)) {
+        numberOfFilms = +prompt("How many films have you seen", "...");
     }
-
 }
+start();
 
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    private: false
+};
 
-console.log(personalMovieDB);
+function showMyDB (param) {
+    if(!param){
+        console.log(personalMovieDB);
+    }
+} 
+
+writeYourGeneres();
+showMyDB(personalMovieDB.private);
+
+function writeYourGeneres() {
+    let i = 0;
+    while(i++<3){
+        const genre = prompt(`Your favorit music ${i}`);
+        personalMovieDB.genres[i-1] = genre;
+    }   
+}
