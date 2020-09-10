@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 //let number = 5;
 //const leftBorderWidth = 1;
@@ -26,17 +26,14 @@ const a = prompt("film", ""),
     c = prompt("film", ""),
     d = prompt("nota", "");
 
-    personalMovieDB.movies.a = b;
-    personalMovieDB["movies"][c] = d;
+personalMovieDB.movies.a = b;
+personalMovieDB["movies"][c] = d;
 
-    console.log(personalMovieDB);
-    for (let index = 0; index < array.length; index++) {
-        const element = array[index];
-sfsfsdfsd
-fsdfsd
-sfsfsdfsd
-fsdfsd
+console.log(personalMovieDB);
 
-
-
-    }
+let i = 0;
+while (i++ < 2) {
+    const e = prompt("film", ""),
+        f = prompt("nota", "");
+    personalMovieDB.movies[e] = f;
+}
