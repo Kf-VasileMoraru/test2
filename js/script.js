@@ -21,19 +21,28 @@ const personalMovieDB = {
     private: false
 };
 
-const a = prompt("film", ""),
-    b = prompt("nota", ""),
-    c = prompt("film", ""),
-    d = prompt("nota", "");
+// const a = prompt("film", ""),
+//     b = prompt("nota", ""),
+//     c = prompt("film", ""),
+//     d = prompt("nota", "");
 
-personalMovieDB.movies.a = b;
-personalMovieDB["movies"][c] = d;
+// personalMovieDB.movies.a = b;
+// personalMovieDB["movies"][c] = d;
 
-console.log(personalMovieDB);
 
 let i = 0;
-while (i++ < 2) {
+while (i++ < 3) {
     const e = prompt("film", ""),
         f = prompt("nota", "");
-    personalMovieDB.movies[e] = f;
+
+    if (e != null && e != '' && e.length < 4) {
+        personalMovieDB.movies[e] = f;
+    } else {
+        i--;
+        continue;
+    }
+
 }
+
+
+console.log(personalMovieDB);
